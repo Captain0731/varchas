@@ -1,0 +1,117 @@
+/* =========================
+   GUEST DIRECTORY PAGE
+========================= */
+
+.guest-directory{
+    background:var(--bg-main);
+    padding:100px 20px;
+    font-family:"Playfair Display", serif;
+}
+
+/* HEADER */
+
+.guest-header{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    margin-bottom:70px;
+}
+
+.guest-small{
+    letter-spacing:5px;
+    font-size:14px;
+    color:var(--accent-gold);
+}
+
+.guest-title{
+    font-size:clamp(34px, 4.8vw, 50px);
+    color:var(--text-dark);
+    margin:10px 0;
+}
+
+.guest-desc{
+    font-size:18px;
+    color:var(--text-medium);
+}
+
+/* GRID */
+
+.guest-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+}
+
+/* CARD */
+
+.guest-card{
+    background:var(--card-strong);
+    padding:30px;
+    border-radius:24px;
+    border:1px solid #e2d6cc;
+    box-shadow: var(--shadow-soft);
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.guest-card:hover{
+    box-shadow: 0 20px 34px rgba(91, 58, 46, 0.14);
+}
+
+/* NAME */
+
+.guest-card h3{
+    font-size:22px;
+    color:var(--text-dark);
+}
+
+/* ROLE */
+
+.guest-role{
+    color:var(--primary-brown);
+    margin-top:6px;
+}
+
+/* ORG */
+
+.guest-org{
+    color:var(--text-medium);
+    margin-bottom:20px;
+}
+
+/* LINKEDIN BUTTON */
+
+.linkedin-btn{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:20px;
+    background:#f8f2eb;
+    border:1px solid var(--primary-brown);
+    color:var(--primary-brown);
+    text-decoration:none;
+    font-size:14px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.linkedin-btn:hover {
+    background: var(--primary-brown);
+    color: #fff;
+}
+
+@media (max-width: 1060px) and (min-width: 721px) {
+    .guest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .guest-directory {
+        padding: 74px 16px;
+    }
+
+    .guest-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}

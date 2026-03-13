@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Outfit:wght@400;500;600&display=swap");
+
+:root {
+	--primary-dark: #5b3a2e;
+	--primary-brown: #7a4a33;
+	--button-brown: #8b5e3c;
+
+	--bg-main: #f6f2ee;
+	--bg-section: #eae2da;
+	--card: #efe7e0;
+	--card-strong: #f3ece5;
+
+	--text-dark: #3c2a21;
+	--text-medium: #6b4b3e;
+	--text-light: #9c7b6e;
+
+	--accent-gold: #c89b6d;
+	--accent-light: #d6b08c;
+	--accent-orange: #ff7a2f;
+
+	--shadow-soft: 0 16px 32px rgba(91, 58, 46, 0.09);
+	--radius-xl: 24px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background:
+		radial-gradient(1200px 500px at -20% -10%, rgba(200, 155, 109, 0.16), transparent 60%),
+		radial-gradient(700px 400px at 110% 30%, rgba(122, 74, 51, 0.08), transparent 60%),
+		var(--bg-main);
+	color: var(--text-dark);
+	font-family: "Outfit", sans-serif;
+}
+
+a {
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Premium interaction system */
+
+.premium-card,
+.operation-card,
+.event-card,
+.guest-card,
+.vision-card,
+.menu-card,
+.contact-card,
+.details-card,
+.speaker-card {
+	transition:
+		transform 0.35s ease,
+		box-shadow 0.35s ease,
+		border-color 0.35s ease,
+		filter 0.35s ease;
+	will-change: transform, box-shadow;
+	transform-origin: center;
+}
+
+.premium-card:hover,
+.operation-card:hover,
+.event-card:hover,
+.guest-card:hover,
+.vision-card:hover,
+.menu-card:hover,
+.contact-card:hover,
+.details-card:hover,
+.speaker-card:hover {
+	transform: translateY(-8px) scale(1.03);
+	box-shadow: 0 24px 40px rgba(91, 58, 46, 0.16);
+	border-color: rgba(200, 155, 109, 0.65);
+	filter: saturate(1.02);
+}
+
+.premium-button,
+.event-btn,
+.speaker-btn,
+.contact-btn,
+.register-btn,
+.home-btn,
+.login-btn,
+.linkedin-btn,
+.login-card button,
+.signup-form button {
+	position: relative;
+	overflow: hidden;
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		filter 0.25s ease,
+		background-position 0.45s ease;
+	will-change: transform;
+}
+
+.premium-button::before,
+.event-btn::before,
+.speaker-btn::before,
+.contact-btn::before,
+.register-btn::before,
+.home-btn::before,
+.login-btn::before,
+.linkedin-btn::before,
+.login-card button::before,
+.signup-form button::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(110deg, transparent 10%, rgba(255, 255, 255, 0.35) 50%, transparent 90%);
+	transform: translateX(-130%);
+}
+
+.premium-button:hover,
+.event-btn:hover,
+.speaker-btn:hover,
+.contact-btn:hover,
+.register-btn:hover,
+.home-btn:hover,
+.login-btn:hover,
+.linkedin-btn:hover,
+.login-card button:hover,
+.signup-form button:hover {
+	transform: translateY(-2px) scale(1.02);
+	box-shadow: 0 14px 24px rgba(200, 155, 109, 0.24);
+	filter: brightness(1.02);
+}
+
+.premium-button:hover::before,
+.event-btn:hover::before,
+.speaker-btn:hover::before,
+.contact-btn:hover::before,
+.register-btn:hover::before,
+.home-btn:hover::before,
+.login-btn:hover::before,
+.linkedin-btn:hover::before,
+.login-card button:hover::before,
+.signup-form button:hover::before {
+	animation: shimmer-slide 1s ease;
+}
+
+.premium-button:active,
+.event-btn:active,
+.speaker-btn:active,
+.contact-btn:active,
+.register-btn:active,
+.home-btn:active,
+.login-btn:active,
+.linkedin-btn:active,
+.login-card button:active,
+.signup-form button:active {
+	transform: scale(0.98);
+}
+
+.navbar-menu a {
+	position: relative;
+}
+
+.navbar-menu a::after {
+	content: "";
+	position: absolute;
+	left: 12px;
+	right: 12px;
+	bottom: 4px;
+	height: 2px;
+	border-radius: 999px;
+	background: linear-gradient(90deg, var(--accent-gold), var(--primary-brown));
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.25s ease;
+}
+
+.navbar-menu a:hover::after,
+.navbar-menu a.active::after {
+	transform: scaleX(1);
+}
+
+input,
+textarea,
+select {
+	transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	border-color: var(--accent-gold);
+	box-shadow: 0 0 0 3px rgba(200, 155, 109, 0.22);
+}
+
+a,
+button {
+	transition: color 0.2s ease;
+}
+
+/* Reusable timeline and pass effects */
+
+.timeline-item-left {
+	opacity: 0;
+	transform: translateX(-30px);
+	animation: timeline-left 0.65s ease forwards;
+}
+
+.timeline-item-right {
+	opacity: 0;
+	transform: translateX(30px);
+	animation: timeline-right 0.65s ease forwards;
+}
+
+.event-pass-card {
+	transform-origin: center;
+	animation: event-pass-in 0.7s ease-out both;
+}
+
+.qr-scan-wrap {
+	position: relative;
+	overflow: hidden;
+}
+
+.qr-scan-wrap::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: linear-gradient(90deg, transparent, rgba(200, 155, 109, 0.95), transparent);
+	animation: qr-scan-line 2.2s linear infinite;
+}
+
+@keyframes shimmer-slide {
+	from {
+		transform: translateX(-130%);
+	}
+	to {
+		transform: translateX(130%);
+	}
+}
+
+@keyframes timeline-left {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes timeline-right {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes event-pass-in {
+	from {
+		opacity: 0;
+		transform: scale(0.9) rotateX(10deg);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1) rotateX(0deg);
+	}
+}
+
+@keyframes qr-scan-line {
+	from {
+		top: -8%;
+		opacity: 0.2;
+	}
+	35% {
+		opacity: 0.95;
+	}
+	to {
+		top: 108%;
+		opacity: 0.2;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+ 

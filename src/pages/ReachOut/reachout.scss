@@ -1,0 +1,152 @@
+.reach-page {
+	background: var(--bg-main);
+	padding: 100px 20px;
+	font-family: "Playfair Display", serif;
+}
+
+.reach-header {
+	max-width: 880px;
+	margin: 0 auto 50px;
+	text-align: center;
+}
+
+.reach-small {
+	letter-spacing: 0.32em;
+	font-size: 12px;
+	color: var(--accent-gold);
+	margin-bottom: 10px;
+}
+
+.reach-title {
+	margin: 0 0 12px;
+	font-size: clamp(34px, 5vw, 56px);
+	color: var(--text-dark);
+}
+
+.reach-desc {
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.75;
+	color: var(--text-medium);
+}
+
+.reach-layout {
+	max-width: 1220px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1.15fr 0.85fr;
+	gap: 24px;
+}
+
+.reach-form-card,
+.reach-info-card {
+	background: var(--card-strong);
+	border: 1px solid #e2d6cc;
+	border-radius: 24px;
+	box-shadow: var(--shadow-soft);
+}
+
+.reach-form-card {
+	padding: 36px 30px;
+}
+
+.reach-form-card h2 {
+	margin: 0 0 20px;
+	font-size: clamp(26px, 3vw, 36px);
+	color: var(--text-dark);
+}
+
+.reach-form {
+	display: flex;
+	flex-direction: column;
+	gap: 11px;
+}
+
+.reach-form label {
+	font-family: "Outfit", sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--text-medium);
+}
+
+.reach-form input,
+.reach-form textarea {
+	width: 100%;
+	border: 1px solid #e3d5c7;
+	background: #fffaf4;
+	border-radius: 12px;
+	padding: 13px 14px;
+	font-size: 15px;
+	font-family: "Outfit", sans-serif;
+	color: var(--text-dark);
+}
+
+.reach-form textarea {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.reach-btn {
+	margin-top: 8px;
+	padding: 13px 20px;
+	border: none;
+	border-radius: 30px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #fff;
+	background: linear-gradient(135deg, #8b5e3c, #5b3a2e);
+	font-family: "Outfit", sans-serif;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+}
+
+.reach-info-col {
+	display: grid;
+	gap: 22px;
+}
+
+.reach-info-card {
+	padding: 28px 24px;
+}
+
+.reach-info-card h3 {
+	margin: 0 0 14px;
+	color: var(--text-dark);
+	font-size: 24px;
+}
+
+.reach-info-card p {
+	margin: 0 0 10px;
+	color: var(--text-medium);
+	font-size: 16px;
+	line-height: 1.6;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.reach-icon,
+.reach-btn-icon {
+	font-size: 16px;
+	flex-shrink: 0;
+}
+
+@media (max-width: 980px) {
+	.reach-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 640px) {
+	.reach-page {
+		padding: 74px 16px;
+	}
+
+	.reach-form-card,
+	.reach-info-card {
+		padding: 24px 18px;
+	}
+}

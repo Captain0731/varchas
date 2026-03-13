@@ -1,0 +1,6 @@
+.pageTransition {
+  display: block;
+  width: 100%;
+  overflow: visible;
+  will-change: transform, opacity, filter;
+}

@@ -1,0 +1,147 @@
+/* =========================
+   EVENT DETAILS PAGE
+========================= */
+
+.event-details{
+    background:var(--bg-main);
+    font-family:"Playfair Display", serif;
+}
+
+/* HERO */
+
+.event-hero{
+    position:relative;
+    height:420px;
+}
+
+.event-hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.event-overlay{
+    position:absolute;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    max-width:1000px;
+    color:var(--text-dark);
+}
+
+/* CATEGORY */
+
+.event-category{
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+}
+
+/* TITLE */
+
+.event-title{
+    font-size:48px;
+    color:var(--text-dark);
+    margin:12px 0;
+}
+
+/* META */
+
+.event-meta{
+    display:flex;
+    gap:20px;
+    font-size:16px;
+    color:var(--text-medium);
+}
+
+.event-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.event-meta-icon {
+    font-size: 17px;
+}
+
+/* CONTENT */
+
+.event-container{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:50px;
+}
+
+/* INFO */
+
+.event-info h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.event-info p{
+    line-height:1.7;
+    color:var(--text-medium);
+    margin-bottom:15px;
+}
+
+/* SIDEBAR */
+
+.details-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #e2d6cc;
+}
+
+.details-card h3{
+    margin-bottom:15px;
+}
+
+.details-card p{
+    margin-bottom:10px;
+}
+
+/* REGISTER BUTTON */
+
+.register-btn{
+    margin-top:20px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(135deg,#8B5E3C,#5B3A2E);
+    color:white;
+    cursor:pointer;
+}
+
+/* GALLERY */
+
+.event-gallery{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.event-gallery h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:14px;
+}

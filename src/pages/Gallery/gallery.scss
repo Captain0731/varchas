@@ -1,0 +1,77 @@
+/* =========================
+   ACTIVITIES SECTION
+========================= */
+
+.activities{
+    background: var(--bg-section);
+    padding:120px 20px;
+    font-family:"Playfair Display", serif;
+}
+
+/* HEADER */
+
+.activities-header{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    margin-bottom:70px;
+}
+
+/* SMALL TITLE */
+
+.activities-small{
+    letter-spacing:5px;
+    font-size:14px;
+    color:var(--accent-gold);
+    margin-bottom:15px;
+}
+
+/* TITLE */
+
+.activities-title{
+    font-size:50px;
+    color:var(--text-dark);
+    margin-bottom:20px;
+}
+
+/* DESCRIPTION */
+
+.activities-desc{
+    font-size:18px;
+    color:var(--text-medium);
+    line-height:1.7;
+}
+
+/* GRID */
+
+.activities-grid{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:30px;
+}
+
+/* IMAGE CARD */
+
+.activity-card{
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    cursor:pointer;
+}
+
+/* IMAGE */
+
+.activity-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+/* HOVER EFFECT */
+
+.activity-card:hover img{
+    transform:scale(1.08);
+}

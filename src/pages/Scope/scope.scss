@@ -1,0 +1,123 @@
+/* =========================
+   OPERATION SECTION
+========================= */
+
+.operation{
+    background: var(--bg-main);
+    padding:120px 20px;
+    font-family:"Playfair Display", serif;
+}
+
+/* HEADER */
+
+.operation-header{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    margin-bottom:70px;
+}
+
+/* SMALL TITLE */
+
+.operation-small{
+    letter-spacing:5px;
+    font-size:14px;
+    color:var(--accent-gold);
+    margin-bottom:15px;
+}
+
+/* MAIN TITLE */
+
+.operation-title{
+    font-size:50px;
+    color:var(--text-dark);
+    margin-bottom:20px;
+}
+
+/* DESCRIPTION */
+
+.operation-desc{
+    font-size:18px;
+    color:var(--text-medium);
+    line-height:1.7;
+}
+
+/* GRID */
+
+.operation-grid{
+    max-width:1300px;
+    margin:auto;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:35px;
+}
+
+/* CARD */
+
+.operation-card{
+    background:var(--card);
+    border-radius:20px;
+    padding:45px 30px;
+    text-align:center;
+    border:1px solid #e2d6cc;
+    transition:0.3s;
+}
+
+/* CARD HOVER */
+
+.operation-card:hover{
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* ICON */
+
+.icon{
+    width:70px;
+    height:70px;
+    margin:auto;
+    margin-bottom:20px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:white;
+}
+
+.scope-icon {
+    font-size: 30px;
+}
+
+/* ICON COLORS */
+
+.icon1{
+    background:linear-gradient(135deg,#8B5E3C,#C89B6D);
+}
+
+.icon2{
+    background:linear-gradient(135deg,#5B3A2E,#8B5E3C);
+}
+
+.icon3{
+    background:linear-gradient(135deg,#C89B6D,#D6B08C);
+}
+
+.icon4{
+    background:linear-gradient(135deg,#6B4B3E,#5B3A2E);
+}
+
+/* CARD TITLE */
+
+.operation-card h3{
+    font-size:22px;
+    color:var(--text-dark);
+    margin-bottom:12px;
+}
+
+/* CARD TEXT */
+
+.operation-card p{
+    font-size:16px;
+    color:var(--text-medium);
+    line-height:1.7;
+}

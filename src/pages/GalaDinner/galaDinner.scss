@@ -1,0 +1,114 @@
+/* =========================
+   GALA DINNER PAGE
+========================= */
+
+.gala-page{
+    background:var(--bg-main);
+    padding:120px 20px;
+    font-family:"Playfair Display", serif;
+}
+
+/* HEADER */
+
+.gala-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.gala-small{
+    letter-spacing:5px;
+    font-size:14px;
+    color:var(--accent-gold);
+}
+
+.gala-title{
+    font-size:50px;
+    color:var(--text-dark);
+}
+
+/* SEATING FINDER */
+
+.seating-section{
+    max-width:600px;
+    margin:0 auto 80px;
+    text-align:center;
+}
+
+.finder-box{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.finder-box input{
+    flex:1;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+}
+
+.finder-box button{
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(135deg,#8B5E3C,#5B3A2E);
+    color:white;
+}
+
+.seat-result{
+    margin-top:20px;
+    font-size:20px;
+    color:var(--primary-brown);
+}
+
+/* MENU */
+
+.menu-section{
+    max-width:1100px;
+    margin:auto;
+}
+
+.menu-section h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* CARD */
+
+.menu-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #e2d6cc;
+}
+
+.menu-card h3{
+    margin-bottom:20px;
+}
+
+/* LABELS */
+
+.label{
+    margin-left:10px;
+    padding:2px 8px;
+    border-radius:10px;
+    font-size:12px;
+}
+
+.vegan{
+    background:#d4f5d4;
+}
+
+.vegetarian{
+    background:#ffe8a3;
+}
+
+.gluten{
+    background:#cde6ff;
+}
