@@ -1,3 +1,4 @@
+import f1 from "../../assets/images/f1.png";
 import "./gallery.scss";
 
 const Gallery = () => { 
@@ -24,19 +25,19 @@ const Gallery = () => {
       <div className="activities-grid">
 
         <div className="activity-card">
-          <img src="/images/activity1.jpg" alt="activity"/>
+          <img src={f1} alt="activity"/>
         </div>
 
         <div className="activity-card">
-          <img src="/images/activity2.jpg" alt="activity"/>
+          <img src={f1} alt="activity"/>
         </div>
 
         <div className="activity-card">
-          <img src="/images/activity3.jpg" alt="activity"/>
+          <img src={f1} alt="activity"/>
         </div>
 
         <div className="activity-card">
-          <img src="/images/activity4.jpg" alt="activity"/>
+          <img src={f1} alt="activity"/>
         </div>
 
       </div>

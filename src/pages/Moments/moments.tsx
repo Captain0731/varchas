@@ -1,3 +1,4 @@
+import f1 from "../../assets/images/f1.png";
 import "./moments.scss";
 
 const Moments = () => {
@@ -28,19 +29,19 @@ const Moments = () => {
       <div className="moments-grid">
 
         <div className="moment-card">
-          <img src="/images/event1.jpg" alt="event"/>
+          <img src={f1} alt="event"/>
         </div>
 
         <div className="moment-card">
-          <img src="/images/event2.jpg" alt="event"/>
+          <img src={f1} alt="event"/>
         </div>
 
         <div className="moment-card">
-          <img src="/images/event3.jpg" alt="event"/>
+          <img src={f1} alt="event"/>
         </div>
 
         <div className="moment-card">
-          <img src="/images/event4.jpg" alt="event"/>
+          <img src={f1} alt="event"/>
         </div>
 
       </div>

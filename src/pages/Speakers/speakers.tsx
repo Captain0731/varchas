@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import TiltCard from "../../componates/animations/TiltCard";
 import { dashboardStaggerContainer, dashboardStaggerItem } from "../../componates/animations/motionPresets";
+import f1 from "../../assets/images/f1.png";
 import "./speakers.scss";
 
 const speakers = [
@@ -10,42 +11,42 @@ const speakers = [
     name: "Dr. Rohan Shah",
     org: "Google",
     topic: "AI & Future Innovation",
-    image: "/speakers/s1.jpg"
+    image: f1
   },
   {
     id: 2,
     name: "Priya Mehta",
     org: "Microsoft",
     topic: "Cloud Computing",
-    image: "/speakers/s2.jpg"
+    image: f1
   },
   {
     id: 3,
     name: "Arjun Patel",
     org: "Startup Founder",
     topic: "Building Startups",
-    image: "/speakers/s3.jpg"
+    image: f1
   },
   {
     id: 4,
     name: "Neha Desai",
     org: "Amazon",
     topic: "Product Leadership",
-    image: "/speakers/s4.jpg"
+    image: f1
   },
   {
     id: 5,
     name: "Kunal Shah",
     org: "Tech Investor",
     topic: "Startup Funding",
-    image: "/speakers/s5.jpg"
+    image: f1
   },
   {
     id: 6,
     name: "Ananya Gupta",
     org: "Meta",
     topic: "Future of Social Tech",
-    image: "/speakers/s6.jpg"
+    image: f1
   }
 ];
 

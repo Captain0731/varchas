@@ -1,3 +1,4 @@
+import f1 from "../../assets/images/f1.png";
 import "./guestDirectory.scss";
 
 const guests = [
@@ -71,6 +72,8 @@ const GuestDirectory = () => {
         {guests.map((guest) => (
 
           <div key={guest.id} className="guest-card">
+
+            <img src={f1} alt={guest.name} className="guest-img" />
 
             <h3>{guest.name}</h3>
 

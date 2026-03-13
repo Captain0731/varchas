@@ -55,6 +55,18 @@
     transition:transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* GUEST IMAGE */
+
+.guest-img{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin-bottom:16px;
+    border:3px solid var(--accent-gold);
+}
+
 .guest-card:hover{
     box-shadow: 0 20px 34px rgba(91, 58, 46, 0.14);
 }

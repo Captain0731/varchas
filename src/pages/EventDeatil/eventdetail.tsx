@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { FiCalendar, FiMapPin } from "react-icons/fi";
+import f1 from "../../assets/images/f1.png";
 import "./eventdetail.scss";
 
 type EventInfo = {
@@ -18,7 +19,7 @@ const EventDetails = () => {
     title: "Hackathon 2027",
     date: "18 Jan 2027",
     category: "Technology",
-    image: "/events/hackathon.jpg",
+    image: f1,
     desc: "A 24-hour coding challenge bringing together innovators and developers."
   };
 
@@ -111,10 +112,10 @@ const EventDetails = () => {
 
         <div className="gallery-grid">
 
-          <img src="/events/gallery1.jpg"/>
-          <img src="/events/gallery2.jpg"/>
-          <img src="/events/gallery3.jpg"/>
-          <img src="/events/gallery4.jpg"/>
+          <img src={f1} alt="gallery"/>
+          <img src={f1} alt="gallery"/>
+          <img src={f1} alt="gallery"/>
+          <img src={f1} alt="gallery"/>
 
         </div>
 

@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import f1 from "../../assets/images/f1.png";
 import "./speakerDetails.scss";
 
 const speakers = [
@@ -8,7 +9,7 @@ const speakers = [
     org: "Google AI Research",
     topic: "AI & Future Innovation",
     bio: "Dr. Rohan Shah is an AI researcher working on advanced machine learning systems and innovation in artificial intelligence.",
-    image: "/speakers/s1.jpg",
+    image: f1,
     time: "10:00 AM",
     venue: "UIT Auditorium"
   },
@@ -18,7 +19,7 @@ const speakers = [
     org: "Microsoft Cloud",
     topic: "Cloud Computing Future",
     bio: "Priya Mehta leads cloud infrastructure teams at Microsoft and works on scalable enterprise cloud platforms.",
-    image: "/speakers/s2.jpg",
+    image: f1,
     time: "11:30 AM",
     venue: "Innovation Hall"
   }
