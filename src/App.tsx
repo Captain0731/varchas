@@ -48,6 +48,7 @@ function AppContent() {
   const hideFooter = location.pathname === "/login" || location.pathname === "/signup";
   const [isBooting, setIsBooting] = useState(true);
 
+  // Boot loader scroll lock
   useEffect(() => {
     document.body.style.overflow = "hidden";
     const timer = window.setTimeout(() => {
@@ -60,6 +61,11 @@ function AppContent() {
       document.body.style.overflow = "";
     };
   }, []);
+
+  // Always scroll to top on route change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [location.pathname]);
 
   return (
     <div className="App">
