@@ -172,29 +172,6 @@ img {
 	transform: scale(0.98);
 }
 
-.navbar-menu a {
-	position: relative;
-}
-
-.navbar-menu a::after {
-	content: "";
-	position: absolute;
-	left: 12px;
-	right: 12px;
-	bottom: 4px;
-	height: 2px;
-	border-radius: 999px;
-	background: linear-gradient(90deg, var(--accent-gold), var(--primary-brown));
-	transform: scaleX(0);
-	transform-origin: left;
-	transition: transform 0.25s ease;
-}
-
-.navbar-menu a:hover::after,
-.navbar-menu a.active::after {
-	transform: scaleX(1);
-}
-
 input,
 textarea,
 select {

@@ -127,3 +127,49 @@
     transform:translateY(-3px);
     box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
+
+/* MOBILE & TABLET STYLES */
+@media (max-width: 900px) {
+    .contact {
+        padding: 60px 8px;
+    }
+    .contact-header {
+        margin-bottom: 36px;
+    }
+    .contact-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    .contact-small {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    .contact-desc {
+        font-size: 15px;
+    }
+    .contact-card {
+        padding: 28px 12px;
+        border-radius: 16px;
+    }
+    .contact-avatar {
+        width: 54px;
+        height: 54px;
+        font-size: 18px;
+        margin-bottom: 16px;
+        border-radius: 50%;
+    }
+    .contact-name {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .contact-role,
+    .contact-email,
+    .contact-phone {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+    .contact-btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}

@@ -22,24 +22,26 @@ const Gallery = () => {
       </div>
 
 
+
       <div className="activities-grid">
-
         <div className="activity-card">
           <img src={f1} alt="activity"/>
         </div>
-
-        <div className="activity-card">
+        {/* Show other cards only on desktop */}
+        <div className="activity-card hide-on-mobile">
           <img src={f1} alt="activity"/>
         </div>
-
-        <div className="activity-card">
+        <div className="activity-card hide-on-mobile">
           <img src={f1} alt="activity"/>
         </div>
-
-        <div className="activity-card">
+        <div className="activity-card hide-on-mobile">
           <img src={f1} alt="activity"/>
         </div>
+      </div>
 
+      {/* View More button below grid on all devices */}
+      <div className="view-more-btn">
+        <button>View More</button>
       </div>
 
     </section>

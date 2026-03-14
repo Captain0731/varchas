@@ -1,3 +1,19 @@
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+    background: #f6f2ee;
+}
+::-webkit-scrollbar-thumb {
+    background: #bfa993;
+    border-radius: 8px;
+    border: 2px solid #f6f2ee;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #a88a6a;
+}
+::-webkit-scrollbar-corner {
+    background: #f6f2ee;
+}
 /* =========================
    LOGIN PAGE
 ========================= */
@@ -266,6 +282,19 @@
     }
 }
 
+/* Hide left panel and stats/features on mobile */
+@media (max-width: 560px) {
+    .login-left {
+        display: none !important;
+    }
+    .login-stat-row,
+    .login-features {
+        display: none !important;
+    }
+    .login-card {
+        padding: 34px 8px;
+    }
+}
 @media (max-width: 560px) {
     .login-page {
         padding: 22px 12px;

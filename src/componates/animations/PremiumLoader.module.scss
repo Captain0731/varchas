@@ -86,3 +86,23 @@
   text-transform: uppercase;
   color: #7a4a33;
 }
+
+@media (max-width: 600px) {
+  .loaderCore {
+    width: 54px;
+    height: 54px;
+  }
+  .centerBadge {
+    width: 28px;
+    height: 28px;
+    padding: 2px;
+  }
+  .loaderWrap {
+    gap: 8px;
+  }
+  .label {
+    font-size: 8px;
+    letter-spacing: 0.13em;
+    padding: 0 2px;
+  }
+}

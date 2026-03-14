@@ -1,3 +1,13 @@
+/* Hide left panel and points on mobile, show only form */
+@media (max-width: 560px) {
+	.signup-left,
+	.signup-points {
+		display: none !important;
+	}
+	.signup-card {
+		padding: 34px 8px;
+	}
+}
 .signup-page {
 	min-height: calc(100vh - 78px);
 	display: flex;

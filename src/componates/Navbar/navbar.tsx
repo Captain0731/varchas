@@ -1,17 +1,29 @@
 import "./navbar.scss";
-import { useScroll, useSpring, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { FiLogIn } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 import logoSrc from "../../assets/images/logo.png";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const { scrollYProgress } = useScroll();
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 110,
-    damping: 28,
-    mass: 0.2,
-  });
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", onEscape);
+    return () => {
+      document.removeEventListener("keydown", onEscape);
+    };
+  }, []);
 
   const isActive = (key: "home" | "speakers" | "guest" | "events" | "gala" | "reach") => {
     const path = location.pathname;
@@ -27,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="navbar">
+    <header className={`navbar ${menuOpen ? "menu-open" : ""}`}>
 
       <div className="navbar-container">
 
@@ -48,14 +60,17 @@ const Navbar = () => {
 
         {/* NAVIGATION */}
 
-        <nav className="navbar-menu">
+        <nav id="navbar-menu" className={`navbar-menu ${menuOpen ? "open" : ""}`} aria-label="Primary">
 
-          <Link className={isActive("home") ? "active" : ""} to="/">Home</Link>
-          <Link className={isActive("speakers") ? "active" : ""} to="/speakers">Speakers</Link>
-          <Link className={isActive("guest") ? "active" : ""} to="/guest">Guest Directory</Link>
-          <Link className={isActive("events") ? "active" : ""} to="/event">Events</Link>
-          <Link className={isActive("gala") ? "active" : ""} to="/gala-dinner">Gala Dinner</Link>
-          <Link className={isActive("reach") ? "active" : ""} to="/reachout">Reach Out</Link>
+          <Link className={isActive("home") ? "active" : ""} to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link className={isActive("speakers") ? "active" : ""} to="/speakers" onClick={() => setMenuOpen(false)}>Speakers</Link>
+          <Link className={isActive("guest") ? "active" : ""} to="/guest" onClick={() => setMenuOpen(false)}>Guest Directory</Link>
+          <Link className={isActive("events") ? "active" : ""} to="/event" onClick={() => setMenuOpen(false)}>Events</Link>
+          <Link className={isActive("gala") ? "active" : ""} to="/gala-dinner" onClick={() => setMenuOpen(false)}>Gala Dinner</Link>
+          <Link className={isActive("reach") ? "active" : ""} to="/reachout" onClick={() => setMenuOpen(false)}>Reach Out</Link>
+          <Link className="mobile-menu-login" to="/login" onClick={() => setMenuOpen(false)}>
+            <FiLogIn className="nav-icon" /> Login
+          </Link>
 
         </nav>
 
@@ -63,6 +78,21 @@ const Navbar = () => {
         {/* RIGHT SIDE */}
 
         <div className="navbar-right">
+
+          <button
+            className={`menu-toggle ${menuOpen ? "open" : ""}`}
+            type="button"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="navbar-menu"
+          >
+            <span className="menu-lines" aria-hidden="true">
+              <span className="menu-line" />
+              <span className="menu-line" />
+              <span className="menu-line" />
+            </span>
+          </button>
 
           <Link className="login-btn" to="/login">
             <FiLogIn className="nav-icon" /> Login
@@ -73,13 +103,6 @@ const Navbar = () => {
         </div>
 
       </div>
-
-      <motion.div
-        className="navbar-scroll-progress"
-        style={{ scaleX: smoothProgress }}
-        aria-hidden="true"
-      />
-
     </header>
   );
 };

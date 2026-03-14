@@ -44,6 +44,7 @@ const Contact = () => {
           <FiPhone className="contact-icon" /> +91 63545 32131
         </p>
 
+        <br />
         <button className="contact-btn">
           Reach Out →
         </button>

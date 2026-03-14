@@ -50,6 +50,15 @@
     display:grid;
     grid-template-columns: repeat(4,1fr);
     gap:30px;
+    
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 }
 
 /* IMAGE CARD */
@@ -68,10 +77,67 @@
     height:300px;
     object-fit:cover;
     transition:0.4s;
+    @media (max-width: 1024px) {
+        height:220px;
+    }
+    @media (max-width: 600px) {
+        height:180px;
+    }
 }
 
 /* HOVER EFFECT */
 
 .activity-card:hover img{
     transform:scale(1.08);
+}
+
+/* Hide extra cards on mobile */
+@media (max-width: 600px) {
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
+
+/* View More button styles (all devices) */
+.view-more-btn {
+    text-align: center;
+    margin-top: 24px;
+}
+.view-more-btn button {
+    background: var(--accent-gold);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 28px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+}
+.view-more-btn button:hover {
+    background: #bfa14a;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 600px) {
+    .activities {
+        padding: 60px 8px;
+    }
+    .activities-header {
+        margin-bottom: 36px;
+    }
+    .activities-small {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+    .activities-title {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    .activities-desc {
+        font-size: 15px;
+    }
 }

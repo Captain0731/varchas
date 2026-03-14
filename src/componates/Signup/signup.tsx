@@ -1,5 +1,7 @@
+
 import "./signup.scss";
 import { Link } from "react-router-dom";
+import logoSrc from "../../assets/images/logo.png";
 
 const Signup = () => {
 	return (
@@ -20,7 +22,9 @@ const Signup = () => {
 					</div>
 				</div>
 
+
 				<div className="signup-card">
+					<img src={logoSrc} alt="Varchas Logo" style={{ display: 'block', margin: '0 auto 18px', height: 60 }} />
 					<h2>Member Signup</h2>
 					<p className="signup-sub">Complete your profile to continue</p>
 

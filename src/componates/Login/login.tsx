@@ -1,6 +1,8 @@
+
 import "./login.scss";
 import { FiCalendar, FiMic, FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import logoSrc from "../../assets/images/logo.png";
 
 const Login = () => {
   return (
@@ -39,6 +41,7 @@ const Login = () => {
         </div>
 
         <div className="login-card">
+          <img src={logoSrc} alt="Varchas Logo" style={{ display: 'block', margin: '0 auto 18px', height: 60 }} />
           <h2>Member Login</h2>
 
           <p className="login-sub">

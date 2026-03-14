@@ -125,3 +125,50 @@
     font-size:14px;
     color:var(--text-medium);
 }
+
+/* MOBILE & TABLET STYLES */
+@media (max-width: 900px) {
+    .vision {
+        padding: 60px 8px;
+    }
+    .vision-header {
+        margin-bottom: 36px;
+    }
+    .vision-title {
+        font-size: 32px;
+    }
+    .vision-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+    .vision-card {
+        padding: 28px 12px;
+        border-radius: 18px;
+    }
+    .vision-icon {
+        width: 54px;
+        height: 54px;
+        font-size: 22px;
+        margin-bottom: 16px;
+        border-radius: 12px;
+    }
+    .vision-icon-svg {
+        font-size: 24px;
+    }
+    .vision-card-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .vision-text {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+    .vision-label {
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+    .vision-tags span {
+        font-size: 12px;
+        padding: 7px 12px;
+    }
+}

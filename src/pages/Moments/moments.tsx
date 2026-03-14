@@ -26,24 +26,26 @@ const Moments = () => {
       </div>
 
 
+
       <div className="moments-grid">
-
         <div className="moment-card">
           <img src={f1} alt="event"/>
         </div>
-
-        <div className="moment-card">
+        {/* Show other cards only on desktop/tablet */}
+        <div className="moment-card hide-on-mobile">
           <img src={f1} alt="event"/>
         </div>
-
-        <div className="moment-card">
+        <div className="moment-card hide-on-mobile">
           <img src={f1} alt="event"/>
         </div>
-
-        <div className="moment-card">
+        <div className="moment-card hide-on-mobile">
           <img src={f1} alt="event"/>
         </div>
+      </div>
 
+      {/* View More button below grid on mobile only */}
+      <div className="view-more-btn">
+        <button>View More</button>
       </div>
 
     </section>
