@@ -1,5 +1,6 @@
 import f1 from "../../assets/images/f1.png";
 import "./moments.scss";
+import { Link } from "react-router-dom";
 
 const Moments = () => {
   return (
@@ -25,8 +26,6 @@ const Moments = () => {
 
       </div>
 
-
-
       <div className="moments-grid">
         <div className="moment-card">
           <img src={f1} alt="event"/>
@@ -45,7 +44,9 @@ const Moments = () => {
 
       {/* View More button below grid on mobile only */}
       <div className="view-more-btn">
-        <button>View More</button>
+        <Link to="/moremovment">
+          <button>View More</button>
+        </Link>
       </div>
 
     </section>

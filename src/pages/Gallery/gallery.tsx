@@ -1,5 +1,7 @@
+
 import f1 from "../../assets/images/f1.png";
 import "./gallery.scss";
+import { Link } from "react-router-dom";
 
 const Gallery = () => { 
   return (
@@ -41,7 +43,9 @@ const Gallery = () => {
 
       {/* View More button below grid on all devices */}
       <div className="view-more-btn">
-        <button>View More</button>
+        <Link to="/moregallery">
+          <button>View More</button>
+        </Link>
       </div>
 
     </section>

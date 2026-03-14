@@ -15,6 +15,8 @@ import Login from "./componates/Login/login";
 import Signup from "./componates/Signup/signup";
 import Gallery from "./pages/Gallery/gallery";
 // import Vision from "./pages/Vision/vision";
+import MoreGallery from "./pages/MoreGallery/moregallery";
+import Moremovment from "./pages/Moremovment/moremovment";
 import VisionMission from "./pages/Vision/vision";
 import Moments from "./pages/Moments/moments";
 import Contact from "./pages/Contact/contact";
@@ -79,6 +81,8 @@ function AppContent() {
           <Route path="/signup" element={<PageTransition><Signup /></PageTransition>} />
           <Route path="/event" element={<PageTransition><Events /></PageTransition>} />
           <Route path="/eventdetail" element={<PageTransition><EventDetails /></PageTransition>} />
+          <Route path="/moregallery" element={<PageTransition><MoreGallery /></PageTransition>} />
+          <Route path="/moremovment" element={<PageTransition><Moremovment /></PageTransition>} />
         </Routes>
       </AnimatePresence>
       <ScrollTop />
